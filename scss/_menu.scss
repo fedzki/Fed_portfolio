@@ -41,7 +41,6 @@
   top: 0;
   width: 100%;
   visibility: hidden;
-  opacity: 0.9;
 
   &.show {
     visibility: visible;
@@ -64,6 +63,7 @@
     padding: 0;
     background: darken($primary-color, 5);
     transform: translate3d(0, -100%, 0);
+    opacity: 0.9;
     @include easeOut;
 
     &.show {
@@ -73,7 +73,7 @@
   }
   //branding side
   &-branding {
-    background: $primary-color;
+    background: rgba($primary-color, 0.9);
     transform: translate3d(0, 100%, 0);
     @include easeOut;
     &.show {
@@ -98,9 +98,9 @@
       transform: translate3d(0, 0, 0);
     }
 
-    &.current > a {
-      color: $secondary-color;
-    }
+    // &.current > a {
+    //   color: $secondary-color;
+    // }
   }
 
   .nav-link {
