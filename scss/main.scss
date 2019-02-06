@@ -29,6 +29,9 @@ $background-opacity: 0.6;
   }
 }
 
+@import "config";
+@import "menu";
+
 * {
   box-sizing: border-box;
 }
