@@ -5,18 +5,13 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: simplifica;
-  src: url(../img/SIMPLIFICATypeface.tff);
-}
-
 body {
   @include background;
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: simplifica;
+  font-family: "Orbitron", sans-serif;
   line-height: 1.5;
 }
 
