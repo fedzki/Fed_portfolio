@@ -166,6 +166,8 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
+  .about-info .desc {
+    font-size: 1.1rem; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -179,22 +181,47 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
+  padding-top: 30px;
+  grid-gap: 5%;
   grid-template-columns: repeat(3, 1fr); }
-  .projects img {
-    width: 100%;
-    border: 3px #fff solid; }
-    .projects img:hover {
-      opacity: 0.6;
-      border-color: #519548;
-      transition: all 0.5s ease-out; }
+  .projects .gal-item {
+    margin: auto;
+    align-self: center;
+    justify-self: center; }
+    .projects .gal-item img {
+      width: 100%;
+      border: 3px #fff solid;
+      border-radius: 10%;
+      cursor: pointer; }
+      .projects .gal-item img.close {
+        transform: rotate(180deg); }
+      .projects .gal-item img:hover {
+        opacity: 0.6;
+        border-color: #519548;
+        transition: all 0.5s ease-out; }
+
+.project-gallery {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  .project-gallery .current-pic {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #06191a;
+    opacity: 0.9; }
 
 .boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem; }
+  margin-top: 25vh; }
   .boxes div {
     font-size: 1rem;
     border: 3px #fff solid;
