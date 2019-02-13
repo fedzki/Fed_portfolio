@@ -12,7 +12,7 @@ const galButtonLight = document.querySelectorAll(".btn-light");
 const galButtonDark = document.querySelectorAll(".btn-dark");
 const galItems = document.querySelectorAll(".gal-item");
 const galPics = document.querySelectorAll(".gal-img");
-var selectedPic = document.getElementById("cur_pic_id").innerHTML;
+
 // Set Initial Sate of Menu
 
 let showMenu = false;
