@@ -22,11 +22,11 @@ let gallerySetDefault = 1;
 menuBtn.addEventListener("click", toggleMenu);
 
 for (var i = 0; i < galPics.length; i++) {
-  galPics[i].addEventListener("click", toggleGallery);
+  galPics[i].addEventListener("click", changeImageSets);
 }
 
 for (var i = 0; i < galPics.length; i++) {
-  galPics[i].addEventListener("click", changeImageSets);
+  galPics[i].addEventListener("click", toggleGallery);
 }
 
 for (var i = 0; i < projectSMpic.length; i++) {
