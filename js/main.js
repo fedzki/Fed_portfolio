@@ -12,16 +12,25 @@ const galButtonLight = document.querySelectorAll(".btn-light");
 const galButtonDark = document.querySelectorAll(".btn-dark");
 const galItems = document.querySelectorAll(".gal-item");
 const galPics = document.querySelectorAll(".gal-img");
-
+var selectedPic = document.getElementById("cur_pic_id").innerHTML;
 // Set Initial Sate of Menu
 
 let showMenu = false;
 let showGallery = false;
+let gallerySetDefault = 1;
 
 menuBtn.addEventListener("click", toggleMenu);
 
 for (var i = 0; i < galPics.length; i++) {
   galPics[i].addEventListener("click", toggleGallery);
+}
+
+for (var i = 0; i < galPics.length; i++) {
+  galPics[i].addEventListener("click", changeImageSets);
+}
+
+for (var i = 0; i < projectSMpic.length; i++) {
+  projectSMpic[i].addEventListener("click", changeImage);
 }
 
 currentPic.addEventListener("click", toggleGallery);
@@ -73,4 +82,26 @@ function toggleGallery() {
     // Set Gallery State
     showGallery = false;
   }
+}
+
+function changeImageSets() {
+  for (var i = 1; i <= galItems.length; i++) {
+    if (this.id == "gal-img-id " + i) {
+      // alert("set " + i);
+      document.getElementById("cur_pic_id").src =
+        "img/project/sub_project " + i + "/1.JPG";
+      document.getElementById("pic1").src =
+        "img/project/sub_project " + i + "/1.JPG";
+      document.getElementById("pic2").src =
+        "img/project/sub_project " + i + "/2.JPG";
+      document.getElementById("pic3").src =
+        "img/project/sub_project " + i + "/3.JPG";
+    }
+  }
+
+  //Set Selected Pic
+}
+
+function changeImage() {
+  document.getElementById("cur_pic_id").src = this.src;
 }
