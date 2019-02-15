@@ -142,7 +142,7 @@ main {
 
 // Project Gallery Overlay
 .project-gallery {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   visibility: hidden;
@@ -192,6 +192,7 @@ main {
   .current-pic {
     display: flex;
     flex-flow: row wrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     float: left;

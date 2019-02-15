@@ -85,9 +85,10 @@ function toggleGallery() {
 }
 
 function changeImageSets() {
-  for (var i = 1; i <= galItems.length; i++) {
+  for (var i = 0; i <= galItems.length; i++) {
     if (this.id == "gal-img-id " + i) {
       // alert("set " + i);
+
       document.getElementById("cur_pic_id").src =
         "img/project/sub_project " + i + "/1.JPG";
       document.getElementById("pic1").src =
