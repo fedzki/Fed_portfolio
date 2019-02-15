@@ -199,7 +199,7 @@ main {
         transition: all 0.5s ease-out; }
 
 .project-gallery {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   visibility: hidden;
@@ -227,6 +227,7 @@ main {
   .project-gallery .current-pic {
     display: flex;
     flex-flow: row wrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     float: left;
@@ -341,6 +342,14 @@ main {
     ul.menu-nav.show,
     div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
   .menu-nav {
     height: 75vh;
     transform: translate3d(-100%, 0, 0);
@@ -356,4 +365,24 @@ main {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+    .projects .project-gallery .current-pic {
+      height: 70vh; }
+      .projects .project-gallery .current-pic .cur_pic {
+        width: 80%;
+        height: 55vh; }
+    .projects .project-gallery .project-pics {
+      height: 30vh; }
+      .projects .project-gallery .project-pics .project-smpic {
+        width: 25%;
+        height: 20vh; }
+  .project-gallery .current-pic {
+    height: 70vh; }
+    .project-gallery .current-pic .cur_pic {
+      width: 80%;
+      height: 55vh; }
+  .project-gallery .project-pics {
+    height: 30vh; }
+    .project-gallery .project-pics .project-smpic {
+      width: 25%;
+      height: 20vh; } }
